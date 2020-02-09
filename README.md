@@ -11,9 +11,9 @@ Nokia 6.1 Plus was announced and released globally on July 2018.
 | SoC          | Qualcomm SDM660 Snapdragon 636                  |
 | CPU          | 8x Qualcomm® Kryo™ 260 up to 1.8GHz             |
 | GPU          | Adreno 509                                      |
-| Memory       | 4GB/6GB                                         |
+| Memory       | 4GB                                             |
 | Shipped Android version |8.1.0, Oreo                           |
-| Current Android version |10.0, Android 10                      |
+| Current Android version |9.0, Pie                              |
 | Storage      | 64GB eMMC 5.1 flash storage                     |
 | Battery      | Non-removable Li-Po 3000 mAh                    |
 | Dimensions   | 158.6 x 75.4 x 8.05 mm                          |
