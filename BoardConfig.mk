@@ -47,21 +47,21 @@ TARGET_2ND_CPU_VARIANT := cortex-a73
 
 TARGET_USES_64_BIT_BINDER := true
 
+BUILD_BROKEN_DUP_RULES := true
+
 # Kernel
-BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 veritykeyid=id:8f56f02c61394639f13af4e8cfe02d087e41b936 androidboot.selinux=permissive 
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 veritykeyid=id:8f56f02c61394639f13af4e8cfe02d087e41b936 androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/nokia/sdm660
 TARGET_KERNEL_CONFIG := SAT-perf_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := r353983c
-
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -72,6 +72,9 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := DRG_sprout
+
+# APEX image
+DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -187,6 +190,7 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_PRODUCT := system/product
 
 # vendorimage
 BOARD_PREBUILT_VENDORIMAGE := vendor/nokia/Dragon/proprietary/vendor.img
@@ -223,6 +227,7 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # Vndk
 BOARD_VNDK_VERSION := current
+PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

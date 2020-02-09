@@ -23,6 +23,8 @@
 
 $(call inherit-product, vendor/nokia/Dragon/Dragon-vendor.mk)
 
+PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
@@ -285,7 +287,7 @@ PRODUCT_PACKAGES += \
 # Wi-Fi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
+    
 # Over_the_air
 PRODUCT_PACKAGES += \
-    Os_Updates
+    Os_Updates    
