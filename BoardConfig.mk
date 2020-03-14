@@ -192,8 +192,8 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := system/product
 
-# vendorimage
-BOARD_PREBUILT_VENDORIMAGE := vendor/nokia/Dragon/proprietary/vendor.img
+
+
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
